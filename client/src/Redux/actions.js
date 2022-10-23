@@ -18,7 +18,9 @@ export const ERROR_HANDLER = 'ERROR_HANDLER'
 
 export function getPokedex() {
   return async (dispatch) => {
-    return await axios('http://localhost:3001/pokemons')
+    return await axios(
+      'https://pi-pokemon-production-7c86.up.railway.app/pokemons'
+    )
       .then((response) =>
         dispatch({
           type: GET_POKEDEX,
@@ -35,7 +37,9 @@ export function getPokedex() {
 }
 export function getTypes() {
   return async (dispatch) => {
-    return await axios('http://localhost:3001/types')
+    return await axios(
+      'https://pi-pokemon-production-7c86.up.railway.app/types'
+    )
       .then((response) =>
         dispatch({
           type: GET_TYPES,
@@ -54,7 +58,7 @@ export function searchByName(name) {
   return async (dispatch) => {
     try {
       const pokemonName = await axios(
-        `http://localhost:3001/pokemons?name=${name}`
+        `https://pi-pokemon-production-7c86.up.railway.app/pokemons?name=${name}`
       )
       return dispatch({
         type: 'GET_POKEMON',
@@ -68,7 +72,10 @@ export function searchByName(name) {
 export function postPokeUser(payload) {
   return async (dispatch) => {
     return await axios
-      .post('http://localhost:3001/pokemons/', payload)
+      .post(
+        'https://pi-pokemon-production-7c86.up.railway.app/pokemons/',
+        payload
+      )
       .then((response) =>
         dispatch({
           type: POST_POKEUSER,
@@ -87,7 +94,9 @@ export function deletePokeUser(id) {
   JSON.stringify(id)
   return async (dispatch) => {
     return await axios
-      .delete(`http://localhost:3001/pokemons/${id}`)
+      .delete(
+        `https://pi-pokemon-production-7c86.up.railway.app/pokemons/${id}`
+      )
       .then((response) =>
         dispatch({
           type: DELETE_POKEMON,
@@ -123,34 +132,37 @@ export function pageSetter(payload) {
 }
 export function getPokeData(id) {
   return async (dispatch) => {
-    return await axios(`http://localhost:3001/pokemons/${id}`).then(
-      (response) =>
-        dispatch({
-          type: GET_POKEMON,
-          payload: response.data,
-        })
+    return await axios(
+      `https://pi-pokemon-production-7c86.up.railway.app/pokemons/${id}`
+    ).then((response) =>
+      dispatch({
+        type: GET_POKEMON,
+        payload: response.data,
+      })
     )
   }
 }
 export function getPrev(id) {
   return async (dispatch) => {
-    return await axios(`http://localhost:3001/pokemons/${id}`).then(
-      (response) =>
-        dispatch({
-          type: GET_PREV,
-          payload: response.data,
-        })
+    return await axios(
+      `https://pi-pokemon-production-7c86.up.railway.app/pokemons/${id}`
+    ).then((response) =>
+      dispatch({
+        type: GET_PREV,
+        payload: response.data,
+      })
     )
   }
 }
 export function getNext(id) {
   return async (dispatch) => {
-    return await axios(`http://localhost:3001/pokemons/${id}`).then(
-      (response) =>
-        dispatch({
-          type: GET_NEXT,
-          payload: response.data,
-        })
+    return await axios(
+      `https://pi-pokemon-production-7c86.up.railway.app/pokemons/${id}`
+    ).then((response) =>
+      dispatch({
+        type: GET_NEXT,
+        payload: response.data,
+      })
     )
   }
 }
