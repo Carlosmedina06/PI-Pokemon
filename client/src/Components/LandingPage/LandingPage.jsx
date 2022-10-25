@@ -24,9 +24,9 @@ const LandingPage = () => {
         </Link>
       </TextContainer>
       <ImgContainer>
-        <Img src={pikachu} alt="pikachu" width="305px" height="621px" />
-        <Img src={charmander} alt="charmander" width="210px" height="621px" />
-        <Img src={squirtle} alt="squirtle" width="210px" height="621px" />
+        <Img src={pikachu} alt="pikachu" width="200px" height="250px" />
+        <Img src={charmander} alt="charmander" width="200x" height="250px" />
+        <Img src={squirtle} alt="squirtle" width="200px" height="250px" />
       </ImgContainer>
     </Grid>
   )

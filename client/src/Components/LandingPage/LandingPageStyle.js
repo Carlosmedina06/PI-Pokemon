@@ -7,6 +7,13 @@ const Grid = styled.div`
   grid-template-rows: 1fr;
   margin: 10rem 10rem;
   min-height: 25rem;
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+  }
 `
 const TextContainer = styled.div`
   grid-column: 1 / 2;
@@ -22,9 +29,21 @@ const Title = styled.h1`
 const Description = styled.p`
   color: #fff;
   letter-spacing: 1.5px;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+  }
 `
 const ImgContainer = styled.div`
   grid-column: 2 / 3;
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+  }
 `
 const Img = styled.img`
   margin: 0px 10px;
