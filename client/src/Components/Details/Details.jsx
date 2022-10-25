@@ -72,7 +72,7 @@ const Details = (props) => {
                 <Name>{name && name[0].toUpperCase() + name.slice(1)}</Name>
                 {sprite ? (
                   <Img>
-                    <img src={sprite} alt="" width="300em" height="300em" />
+                    <img src={sprite} alt="" width="250" height="250" />
                   </Img>
                 ) : (
                   <ImgError>Este pokeUser no tiene imagen</ImgError>

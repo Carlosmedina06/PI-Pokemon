@@ -21,6 +21,12 @@ const Form = styled.form`
     props.isLoading
       ? 'align-items: center; justify-content: center; font-size: large; font-weight: bold'
       : null}
+  @media (max-width: 767px) {
+    width: 90%;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    width: 80%;
+  }
 `
 const Label = styled.label`
   display: flex;

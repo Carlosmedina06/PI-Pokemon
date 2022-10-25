@@ -26,6 +26,11 @@ const Entrance = styled.div`
   &:hover {
     box-shadow: 0.3em 0.3em 0.7em rgb(255 255 255);
   }
+  @media (max-width: 767px) {
+    width: 90%;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+  }
 `
 
 const Name = styled.h1`
@@ -37,6 +42,9 @@ const Img = styled.div`
   margin-bottom: 1rem;
   padding: 10px;
   margin-left: 1.5rem;
+  @media (max-width: 767px) {
+    margin-left: 0;
+  }
 `
 const ImgError = styled.div`
   display: flex;

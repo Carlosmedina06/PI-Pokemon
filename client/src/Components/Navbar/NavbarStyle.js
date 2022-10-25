@@ -83,7 +83,6 @@ const OverlayMenu = styled.ul`
 
   li {
     opacity: ${(props) => (props.open ? 1 : 0)};
-    font-size: 25px;
     margin: 50px 0px;
     transition: opacity 0.4s ease-in-out;
   }
@@ -103,6 +102,7 @@ const Searchbar = styled.input`
   padding: 10px;
   transition: all 0.2s ease-in-out 0ms;
   margin-right: 10px;
+  margin-bottom: 10px;
   &::placeholder {
     color: #4f4f4f;
     opacity: 0.5;

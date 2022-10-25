@@ -64,6 +64,9 @@ const PrevNext = styled.div`
   &:hover {
     box-shadow: 0.3em 0.3em 0.7em rgb(255 255 255);
   }
+  @media (max-width: 767px) {
+    display: none;
+  }
 `
 const LinkBox = styled.div`
   letter-spacing: 1.5px;

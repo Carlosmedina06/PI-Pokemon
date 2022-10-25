@@ -11,6 +11,12 @@ const Grid = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
   gap: 15px;
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `
 const BContainer = styled.div`
   display: flex;
@@ -20,6 +26,14 @@ const BContainer = styled.div`
   justify-content: space-evenly;
   width: 100%;
   margin-top: 1.5rem;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 8rem;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    gap: 4rem;
+  }
 `
 const Button = styled.button`
   min-width: 100px;

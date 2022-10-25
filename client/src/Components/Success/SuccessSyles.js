@@ -17,6 +17,12 @@ const Div = styled.div`
   background: rgb(255, 255, 255);
   box-shadow: 0.1em 0.1em 0.5em rgb(255 255 255);
   color: black;
+  @media (max-width: 767px) {
+    width: 90%;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    width: 80%;
+  }
 `
 
 export { Background, Div }
